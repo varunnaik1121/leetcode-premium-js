@@ -1,5 +1,6 @@
 const mpp = new Map();
 
+//A INTERVAL HAS BEEN CERATED USING THE TIMEOUT
 function customInterval(callback, delay) {
   let id;
   let count = 10;
@@ -9,8 +10,7 @@ function customInterval(callback, delay) {
     mpp.set(id, setTimeout(timeoutFunc, delay));
     console.log(mpp);
   }
-  id = Date.now();
-
+  id = Date.now(); //some unique value on ms as a key to store the timeout
   timeoutFunc();
   return id;
 }
